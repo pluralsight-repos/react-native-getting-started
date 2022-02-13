@@ -1,9 +1,7 @@
-import React, { Compoment } from 'react';
+import React from "react";
 
-class Home extends Compoment{
-    render(){
-        return ();
-    }
+const Home =(props) => {
+    return();
 }
 
 export default Home;
