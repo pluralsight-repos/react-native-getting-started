@@ -13,6 +13,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
 import Home from './Home';
+import Tickets from './Tickets';
 
 const Stack = createStackNavigator();
 
@@ -33,6 +34,14 @@ const App: () => Node = () => {
                         >
                             {(props) => <Home {...props}username='Sports Fan'/>}
                         </Stack.Screen>
+                        <Stack.Screen
+                            name='Tickets'
+                            componet={Tickets}
+                            options={{
+                                headerTitleAlign: 'center',
+                                headerTitleStyle: {fontFamily: 'Ubuntu-R'}
+                            }}
+                        />
                 </Stack.Navigator>
             </NavigationContainer>
         </>
