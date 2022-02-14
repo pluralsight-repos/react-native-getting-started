@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Image, Text, StyleSheet } from 'react-native';
+import Menu from './Menu';
 
 const Home =(props) => {
   return (
@@ -10,22 +11,27 @@ const Home =(props) => {
           />
           <Text style={ styles.title }>Welcome TO GloboTicket</Text>
           <Text style={styles.subtitle}>{ props.username}t</Text>
+          <Image
+            style={styles.heroimage}
+            source={require('./images/boxing.jpg')}
+          />
           <View style={styles.textcontainer}>
               <Text style={ styles.content }>{ introText }</Text>
           </View>
     </View>
   );
 }
-const introText = `Praesentium aut quod et mollitia distinctio fuga. Est nobis ducimus tempore sunt ut minus. Assumenda harum dolores explicabo necessitatibus et. Voluptas ipsa voluptatibus dolor quia aperiam qui rerum. Quia sit corporis dolorum omnis inventore a. Sit velit earum mollitia animi.`
+const introText = `Are you ready for yhe best events? Whether you are into sports, music, or the most amazing seminars we have got you covered. Get rready to purchase great tickets at the best prices. Events are in-person and virtual.`
 const styles = StyleSheet.create({
     container: {
         flexDirection: 'column',
         alignItems: 'center',
-        padding: 20
+        paddingTop: 20,
+        paddingBottom: 20,
+        flex: 1
     },
     textcontainer: {
-        textAlign: 'center',
-        paddingTop: 10
+        padding: 20
     },
     globologo: {
         height: 100,
@@ -41,6 +47,14 @@ const styles = StyleSheet.create({
     content: {
         fontFamily: 'Ubuntu-L',
         fontWeight: '300'
+    },
+    heroimage: {
+        height: 170,
+        width: '100%'
+    },
+    menu: {
+        position: 'absolute',
+        bottom: 10
     }
 });
 export default Home;
