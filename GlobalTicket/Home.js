@@ -15,13 +15,19 @@ const Home =(props) => {
             style={styles.heroimage}
             source={require('./images/boxing.jpg')}
           />
+          
           <View style={styles.textcontainer}>
               <Text style={ styles.content }>{ introText }</Text>
+          </View>
+          <View style={styles.menu}>
+              <Menu />
           </View>
     </View>
   );
 }
+
 const introText = `Are you ready for yhe best events? Whether you are into sports, music, or the most amazing seminars we have got you covered. Get rready to purchase great tickets at the best prices. Events are in-person and virtual.`
+
 const styles = StyleSheet.create({
     container: {
         flexDirection: 'column',
