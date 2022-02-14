@@ -7,12 +7,12 @@ const Menu = () => {
     const navigation = useNavigation();
     
     return(
-        <View style={StyleSheet.menu}>
+        <View style={styles.menu}>
             <TouchableOpacity
                 onPress={() => navigation.navigate('Tickets')}
-                style={StyleSheet.button}
+                style={styles.button}
             >
-                <Text style={StyleSheet.buttontext}></Text>
+                <Text style={styles.buttontext}>Events</Text>
 
             </TouchableOpacity>
         </View>
@@ -24,8 +24,8 @@ const styles = StyleSheet.create({
         flexDirection: 'row'
     },
     button: {
-        borderTopWidth: 1,
-        borderBottomWidth: 1,
+        borderTopWidth: 2,
+        borderBottomWidth: 2,
         marginRight: 5,
         marginLeft: 5
     },
