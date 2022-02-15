@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, TouchableOpacity, Text, StyleSheet } from 'react-native';
-import { useNavigation } from '@react-navigation/native'
+import { useNavigation } from '@react-navigation/native';
+
 
 const Menu = () => {
 
@@ -13,7 +14,12 @@ const Menu = () => {
                 style={styles.button}
             >
                 <Text style={styles.buttontext}>Events</Text>
-
+            </TouchableOpacity>
+            <TouchableOpacity
+                onPress={() => navigation.navigate('Contact')}
+                style={styles.button}
+            >
+                <Text style={styles.buttontext}>Contact Us</Text>
             </TouchableOpacity>
         </View>
     );
