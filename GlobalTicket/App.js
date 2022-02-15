@@ -13,7 +13,7 @@ const Stack = createStackNavigator();
 const App: () => React$Node = () => {
     return (    
         <>
-            <StatusBar barStyle="dark-content"  />
+            <StatusBar barStyle="dark-content" hidden/>
             <NavigationContainer>
                 <Stack.Navigator
                     initialRouteName='Home'
