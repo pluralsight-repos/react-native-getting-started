@@ -51,14 +51,44 @@ const Contact = ({navigation}) => {
                 Message: *required 
             </Text>
             <TextInput
-                style={style.multtxtinput}
+                style={styles.multtxtinput}
                 onChangeText={message => setFormMessage(message)}
                 value={formMessage}
                 multiline={true}
                 numberOfLines={3}
                 selectTextOnFocus={true}
             />
+            <Button
+                title="Contact Us"
+                color="#708090"
+                onPress={submit}
+            />
         </View>
-    )
-
+        
+    );
 }
+const styles = StyleSheet.create({
+    form: {
+        alignItems: 'center',
+        flexDirection: 'column',
+        padding: 18
+    },
+    txtinput: {
+        borderWidth: 1,
+        fontFamily: 'Ubuntu-R',
+        width: '80%',
+        paddingBottom: 15
+    },
+    multtxtinput: {
+        borderWidth: 1,
+        fontFamily: 'Ubuntu-R',
+        width: '0%',
+        height: 120,
+        marginBottom: 15
+    },
+    label: {
+        fontFamily: 'Ubuntu-R',
+    }
+});
+
+export default Contact;
