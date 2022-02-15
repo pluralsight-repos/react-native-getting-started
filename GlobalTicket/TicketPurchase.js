@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import {StyleSheet, Text, View, Image, TextInput, Alert, TouchableOpacity} from 'react-native';
 import globoTickets from './TicketsDB';
 
+
 const TicketPurchase = ({route, navigation}) => {
     const [ticketQuantity, setTicketQuantity] = useState('1');
     const {tickId} = route.params;
@@ -50,36 +51,55 @@ const TicketPurchase = ({route, navigation}) => {
 
 const styles = StyleSheet.create({
     container: {
-
+        flexDirection: 'column',
+        alignItems: 'center',
+        paddingTop: 10
     },
     title: {
-
+        fontFamily: 'Ubuntu-R',
+        paddingBottom: 10
     },
     ticketimage: {
-
+        width: '100%',
+        height: 180
     },
     shortdescription: {
-
+        fontFamily: 'Ubuntu-R',
+        paddingTop: 5,
+        textAlignVertical: 'center'
     }, 
     description: {
-
+        textAlign: 'left',
+        fontFamily: 'Ubuntu-L',
+        fontWeight: '600',
+        padding: 10
     },
     purchaserow: {
+        flexDirection: 'row'
 
     },
     quantityinput: {
-
+        borderWidth: 1,
+        fontFamily: 'Ubuntu-R',
+        height: 38,
+        width: 40,
+        marginLeft: 25
     },
     price: {
-
+        fontFamily: 'Ubuntu-R',
+        paddingTop: 5,
+        paddingBottom: 10
     },
     button: {
-
+        borderTopWidth: 1,
+        borderBottomWidth: 1,
+        width: 60
     },
     buttontext: {
-
+        fontFamily: 'Ubuntu-R',
+        textAlign: 'center',
+        padding: 5
     }
-
 });
 
 export default TicketPurchase;

@@ -6,13 +6,14 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Home from './Home';
 import Tickets from './Tickets';
 import Contact from './Contact';
+import TicketPurchase from './TicketPurchase';
 
 const Stack = createStackNavigator();
 
 const App: () => React$Node = () => {
     return (    
         <>
-            <StatusBar barStyle="dark-content" hidden />
+            <StatusBar barStyle="dark-content"  />
             <NavigationContainer>
                 <Stack.Navigator
                     initialRouteName='Home'
@@ -41,6 +42,15 @@ const App: () => React$Node = () => {
                                 headerTitleAlign: 'center',
                                 headerTitleStyle: {fontFamily: 'Ubuntu-R'},
                                 headerTitle: 'Contact Us'
+                            }}
+                        />
+                        <Stack.Screen
+                            name='Purchase'
+                            component={TicketPurchase}
+                            options={{
+                                headerTitleAlign: 'center',
+                                headerTitleStyle: {fontFamily: 'Ubuntu-R'},
+                                headerTitle: 'Purchase Tickets'
                             }}
                         />
                         
