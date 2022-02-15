@@ -19,5 +19,33 @@ const News = () => {
     useEffect(() => {
         getNews();
     }, []);
+
     console.log(storyData);
+
+    const newsItem = ({item}) => {
+        return (
+            <View style={styles.storylist}>
+                <Image 
+                    style={styles.thumb}
+                    source={{uri: item.url}}
+                />
+                <Text style={styles.storytext}>{item.title}</Text>
+                <Text style={styles.storytext}>{item.url}</Text>
+            </View>
+        );
+    };
 }
+
+const styles = StyleSheet.create({
+    storylist: {
+        flexDirection: 'row'
+    },
+    thumb: {
+
+    },
+    storytext: {
+
+    }
+});
+
+export default News;
