@@ -7,6 +7,7 @@ import Home from './Home';
 import Tickets from './Tickets';
 import Contact from './Contact';
 import TicketPurchase from './TicketPurchase';
+import News from './News';
 
 const Stack = createStackNavigator();
 
@@ -54,6 +55,15 @@ const App: () => React$Node = () => {
                             }}
                         />
                         
+                        <Stack.Screen 
+                            name='News'
+                            component={News}
+                            options={{
+                                headerTitleAlign: 'center',
+                                headerTitleStyle: {fontFamily: 'Ubuntu-R'},
+                                headerTitle: 'Latest News'
+                            }}
+                        />
                 </Stack.Navigator>
             </NavigationContainer>
 
