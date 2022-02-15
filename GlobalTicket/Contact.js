@@ -33,7 +33,7 @@ const Contact = ({navigation}) => {
                 Email: *required
             </Text>
             <TextInput
-                style={style.txtinput}
+                style={styles.txtinput}
                 onChangeText={email => setFormEmail(email)}
                 value={formEmail}
                 selectTextOnFocus={true}
@@ -42,7 +42,7 @@ const Contact = ({navigation}) => {
                 Phone: 
             </Text>
             <TextInput
-                style={style.txtinput}
+                style={styles.txtinput}
                 onChangeText={phone => setFormPhoneNumber(phone)}
                 value={formPhoneNumber}
                 selectTextOnFocus={true}
@@ -82,7 +82,7 @@ const styles = StyleSheet.create({
     multtxtinput: {
         borderWidth: 1,
         fontFamily: 'Ubuntu-R',
-        width: '0%',
+        width: '80%',
         height: 120,
         marginBottom: 15
     },
